@@ -3,9 +3,13 @@
 
 // var page= require(...); ???!
 
-// module.export = ()=>{(
+import React from 'react'
+import Page from '../components/page.js'
+
+var Index = ()=>(
   <Page title="foo">
-    <Nav foo="bar" />
-    ...content
+    <h1>hia</h1>
   </Page>
-// )}
+)
+
+export default Index
