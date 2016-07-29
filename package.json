@@ -1,0 +1,15 @@
+{
+  "name": "static-ideal",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "",
+    "watch": ""
+  },
+  "dependency":{
+    "bolt":"0.0.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
