@@ -1,11 +1,12 @@
-WHOLE FOLDER MAY NEED TO BE UPLOADED TO S3, (req 4 lambda builds)
-ONLY SITE/ IS PUBLIC its essentially dest/
+3 stages
+true static (pure stateless components, renderedToString)
+quasi-static (req bundle, components may have state, static routing) ! only difference is template must be bundled for front end consumption
+pre rendered single page app (includes router, predictive pre-loader)
 
+
+stage one complete!
 
 RoadMap:
-  - upload to s3 cmd
-  <end of stage 1>
-
   - fork static-react, update dependency
   - bundle react components, add re-initialization script
   <end of stage 2>
@@ -17,6 +18,9 @@ RoadMap:
   figure out how to use sid to edit data
 
 
+CONVENIENCE FEATURE:
+mk new bolt project script
+make bolt-cli module
 
 
 
@@ -24,21 +28,15 @@ RoadMap:
 
 
 
-require components
-render sitemap -> pages (recursively)
-*components(*/individual) bundled by name into clientjs?
-upload files to s3
-browser downloads static page
+
+
+
+
 browser uses data payload and component to re-render
 
 diff to s3
 
 GOAL: Rely of webpack where possible
-
-3 types
-true static (pure stateless components, renderedToString)
-quasi-static (req bundle, components may have state, static routing) ! only difference is template must be bundled for front end consumption
-pre rendered single page app (includes router, predictive pre-loader)
 
 COOLIDEA:
 sid are page scoped by default (sid="blah")
