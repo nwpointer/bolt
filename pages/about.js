@@ -3,7 +3,7 @@ import Page from '../components/page.js'
 
 var Index = ()=>(
   <Page title="foo">
-    <h1>home page</h1>
+    <h1>about page</h1>
   </Page>
 )
 

@@ -1,8 +1,3 @@
-{
-  public:['images','pages','styles'],
-  staticOut: 'pages',
-  components: 'components',
-  renderer: 'preact',
-  preload: true | false,
-  preloader: 'static|require'
+module.exports = {
+  bucket: "bolttestserver"
 }

@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "build": "",
-    "watch": ""
+    "watch": "",
+    "push": "aws s3 cp --recursive site s3://bolttestserver"
   },
   "dependency": {
     "bolt": "0.0.1"
