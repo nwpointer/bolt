@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path= require('path');
+
 var exec = function(cmd){
   return require('child_process').exec(cmd, (err)=>{
     if(err) console.log(err);
@@ -30,21 +31,6 @@ function destination(filePath){
   }
   return dest
 }
-function pathApply(filePath, f){
-  // Applies a function f recursivly to all files under that path
-  fs.readdirSync(filePath).map(i=>{
-    var target = path.join(filePath, i)
-    if(isFile(target)){
-      f(target)
-    }
-    else if(isDirectory(target)){
-      pathApply(target, f)
-    }
-    else{
-      throw new Error(target + ' not found')
-    }
-  })
-}
 
 function render(filePath){
   var renderCmd = './node_modules/static-react/bin/static-react.js';
@@ -53,4 +39,11 @@ function render(filePath){
   exec(cmd);
 }
 
-pathApply('./pages', render);
+module.exports = {
+  exec,
+  isFile,
+  isDirectory,
+  changeFileType,
+  destination,
+  render
+}
