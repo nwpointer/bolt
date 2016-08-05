@@ -1,3 +1,4 @@
 module.exports = {
-  bucket: "bolttestserver"
+  bucket: "bolttestserver",
+  renderMode : 'toString' // 'toSting' or 'static', defaults to 'static'
 }

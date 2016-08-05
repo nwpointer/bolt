@@ -6,7 +6,9 @@ function flaten(p){
 	return np
 }
 
-const Page = function({title, ...props}){return(
+const Page = function({title, ...props}){
+	console.log(props.children)
+	return(
 	<html lang="en">
 	<head>
 		<meta charSet="UTF-8"/>
@@ -15,6 +17,7 @@ const Page = function({title, ...props}){return(
 	</head>
 	<body>
 		{props.children}
+		<script	src="assets/bundle.js"></script>
 	</body>
 	</html>
 )}

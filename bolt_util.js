@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path= require('path');
+var config = require('./config.js');
 
 var exec = function(cmd){
   return require('child_process').exec(cmd, (err)=>{
@@ -34,7 +35,8 @@ function destination(filePath){
 
 function render(filePath){
   var renderCmd = './node_modules/static-react/bin/static-react.js';
-  var cmd = `${renderCmd} ./${filePath} > ./${destination(filePath)}`;
+  var flag = config.renderMode === 'toString' ? '-h' : '';
+  var cmd = `${renderCmd} ${flag} ./${filePath} > ./${destination(filePath)}`;
   console.log('exec:', cmd);
   exec(cmd);
 }

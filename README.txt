@@ -6,8 +6,12 @@ pre rendered single page app (includes router, predictive pre-loader)
 
 stage one complete!
 
+bundle plan:
+  in client: onLoad check url, download and run bundled assets/url.js
+  attach component to document.body
+  all pages contain react, any other dep, * components and their particular page's content
+
 RoadMap:
-  - fork static-react, update dependency
   - bundle react components, add re-initialization script
   <end of stage 2>
 
