@@ -1,3 +1,5 @@
+FREEDOM FRI!
+
 3 stages
 true static (pure stateless components, renderedToString)
 quasi-static (req bundle, components may have state, static routing) ! only difference is template must be bundled for front end consumption
